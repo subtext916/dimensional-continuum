@@ -1,0 +1,62 @@
+{
+  "name": "dimensional-continuum",
+  "version": "0.0.1",
+  "main": "dist/dimensional-continuum.js",
+  "module": "",
+  "files": [
+    "dist/dimensional-continuum.js"
+  ],
+  "scripts": {
+    "build": "rollup -c rollup.dimensions.iife.js && rollup -c rollup.dimensions.es.js",
+    "build-demo": "",
+    "test": "npm run transpile-test && rollup.test.es.js",
+    "coverage": "cross-env NODE_ENV=test nyc npm test",
+    "generate-doc": "jsdoc -c jsdoc.json",
+    "demo1": "rollup -c rollup.demo1.js",
+    "demo2": "rollup -c rollup.demo2.js",
+    "demo3": "rollup -c rollup.demo3.js"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "html"
+    ]
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/subtext916/dimensional-continuum.git"
+  },
+  "keywords": [
+    "Threejs",
+    "webworker",
+    "shadowdom",
+    "webcomponent"
+  ],
+  "devDependencies": {
+    "babel-plugin-istanbul": "^4.0.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "babelrc-rollup": "^3.0.0",
+    "chai": "^3.5.0",
+    "cross-env": "^3.1.4",
+    "docdash": "^0.4.0",
+    "jsdoc": "^3.5.5",
+    "mocha": "^3.2.0",
+    "nyc": "^10.1.2",
+    "rollup": "^0.52.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-eslint": "^3.0.0",
+    "rollup-plugin-json": "^2.1.0",
+    "rollup-plugin-multi-entry": "^2.0.2",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "sinon": "^1.17.7",
+    "sinon-chai": "^2.8.0"
+  },
+  "dependencies": {
+    "babel-plugin-transform-custom-element-classes": "^0.1.0",
+    "three": "^0.113.2"
+  }
+}
